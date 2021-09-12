@@ -1,0 +1,149 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.wrapper-banner {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.wrapper__love {
+  position: fixed;
+  top: 100px;
+  left: 100px;
+}
+
+.accept {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  font-family: "Poppins";
+  font-size: 16px;
+  cursor: pointer;
+  padding: 20px 50px;
+  border-radius: 10px;
+  background: rgba(201, 43, 130, 0.6);
+  -webkit-box-shadow: 2px 2px #c92b82;
+          box-shadow: 2px 2px #c92b82;
+  color: #ffffff;
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.heart {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  left: var(--x);
+  -webkit-animation: animated var(--i) linear infinite;
+          animation: animated var(--i) linear infinite;
+}
+
+.heart > img {
+  width: 50px;
+  height: 50px;
+}
+
+@-webkit-keyframes animated {
+  0% {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  100% {
+    -webkit-transform: translateY(-300px);
+            transform: translateY(-300px);
+  }
+}
+
+@keyframes animated {
+  0% {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  100% {
+    -webkit-transform: translateY(-300px);
+            transform: translateY(-300px);
+  }
+}
+
+.popup {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.popup-detail {
+  width: 320px;
+  height: 320px;
+  background: #fff;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.popup-detail p {
+  font-size: 20px;
+  font-family: "Poppins";
+  font-weight: 600;
+  color: transparent;
+  background-image: -webkit-gradient(linear, left top, right top, from(purple), to(blue));
+  background-image: linear-gradient(to right, purple, blue);
+  -webkit-background-clip: text;
+}
+
+.popup-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+audio {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .wrapper__love {
+    left: -100px;
+    top: 50px;
+  }
+  .wrapper-banner {
+    width: 200%;
+    left: 20%;
+  }
+}
