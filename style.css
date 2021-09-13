@@ -31,7 +31,7 @@
   left: 100px;
 }
 
-.accept {
+.button-style {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -45,12 +45,17 @@
   -webkit-box-shadow: 2px 2px #c92b82;
           box-shadow: 2px 2px #c92b82;
   color: #ffffff;
-  position: fixed;
-  top: 60%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 100;
+}
+.button{
+    z-index: 100;
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.button > button{
+    margin: 0 50px;
 }
 
 .heart {
@@ -113,6 +118,8 @@
   background: #fff;
   border-radius: 5px;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .popup-detail p {
@@ -123,6 +130,10 @@
   background-image: -webkit-gradient(linear, left top, right top, from(purple), to(blue));
   background-image: linear-gradient(to right, purple, blue);
   -webkit-background-clip: text;
+}
+.close{
+    align-self:center;
+    margin-top: 100px;
 }
 
 .popup-active {
@@ -145,5 +156,11 @@ audio {
   .wrapper-banner {
     width: 200%;
     left: 20%;
+  }
+  .button{
+      top: 70%;
+  }
+  .button > button{
+      margin-bottom: 30px;
   }
 }

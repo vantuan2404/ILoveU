@@ -46,7 +46,9 @@ for (var i = 0; i <= numberHeart; i++) {
   wrapper.appendChild(heart);
 }
 
-const accept = document.querySelector(".accept");
+const accept = document.querySelector(".button__accept");
+const refuse = document.querySelector(".button__refuse");
+
 const close = document.querySelector(".close");
 accept.addEventListener("click", () => {
   document.querySelector(".popup").classList.add("popup-active");
@@ -54,4 +56,19 @@ accept.addEventListener("click", () => {
 });
 close.addEventListener("click", () => {
   document.querySelector(".popup").classList.remove("popup-active");
+});
+
+refuse.addEventListener("mouseenter", (e) => {
+  const randomIndex = Math.random() * 600;
+  const target = e.target;
+  target.style.position = "absolute";
+  target.style.top = randomIndex + "%";
+  target.style.left = randomIndex + "%";
+});
+refuse.addEventListener("click", (e) => {
+  const randomIndex = Math.random() * 600;
+  const target = e.target;
+  target.style.position = "absolute";
+  target.style.top = randomIndex + "%";
+  target.style.left = randomIndex + "%";
 });
